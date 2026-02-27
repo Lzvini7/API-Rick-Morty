@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Rick and Morty API</h1>
+        <p>Pesquise um personagem ou escolha um na lista abaixo.</p>
+      </header>
+
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Nome do personagem (ex: Rick Sanchez)">
+        <button type="submit" id="search-btn">Buscar</button>
+      </form>
+
+      <div id="error-message" class="hidden"></div>
+      <div id="result-container" class="hidden"></div>
+
+      <hr>
+
+      <div class="tabs">
+        <button id="tab-characters" class="active">Personagens</button>
+        <button id="tab-episodes">Episódios</button>
+      </div>
+
+      <section id="section-characters">
+        <div class="section-header">
+          <h2>Todos os Personagens</h2>
+          <div class="pagination">
+            <button id="prev-char">&lt;</button>
+            <span id="page-char">Página 1</span>
+            <button id="next-char">&gt;</button>
+          </div>
+        </div>
+        <div id="characters-list" class="grid-characters"></div>
+      </section>
+
+      <section id="section-episodes" class="hidden">
+        <div class="section-header">
+          <h2>Todos os Episódios</h2>
+          <div class="pagination">
+            <button id="prev-ep">&lt;</button>
+            <span id="page-ep">Página 1</span>
+            <button id="next-ep">&gt;</button>
+          </div>
+        </div>
+        <div id="episodes-list" class="grid-episodes"></div>
+      </section>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
+
